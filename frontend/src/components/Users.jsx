@@ -13,13 +13,10 @@ export const Users = () => {
         const fetchUsers = async () => {
             try {
                 const response = await axios.get("http://localhost:3000/api/v1/user/bulk");
-                console.log("Response data:", response.data);
 
                 const currentUserEmail = localStorage.getItem("email");
-                console.log("Current email from localStorage:", currentUserEmail);
 
                 const currentUser = response.data.users.find(user => user.email === currentUserEmail);
-                console.log("Current user found:", currentUser);
 
                 if (currentUser) {
                     const firstLetter = currentUser.email.slice(0, 1).toUpperCase();

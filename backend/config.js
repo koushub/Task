@@ -1,3 +1,5 @@
+const jwtSecret = process.env.SECRET;
+
 module.exports = {
-    JWT_SECRET: 'secret'
+    JWT_SECRET: jwtSecret
 };
