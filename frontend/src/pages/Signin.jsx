@@ -36,6 +36,7 @@ export const Signin = () => {
                                 navigate("/dashboard");
                             } catch (error) {
                                 console.error("Error signing in:", error);
+                                alert("Invalid email or password");
                             }
                         }} label={"Sign in"} />
                     </div>
